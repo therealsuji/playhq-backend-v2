@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "games",
+  "info": {
+    "singularName": "game",
+    "pluralName": "games",
+    "displayName": "Games"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "api_id": {
+      "type": "integer"
+    },
+    "box_cover": {
+      "type": "string"
+    },
+    "release_date": {
+      "type": "date"
+    }
+  }
+}
