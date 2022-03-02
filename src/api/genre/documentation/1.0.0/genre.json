@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/games": {
+    "/genres": {
       "get": {
         "responses": {
           "200": {
@@ -19,20 +19,12 @@
                           "attributes": {
                             "type": "object",
                             "properties": {
-                              "title": {
+                              "name": {
                                 "type": "string"
                               },
-                              "api_id": {
-                                "type": "integer"
-                              },
-                              "box_cover": {
+                              "image_background": {
                                 "type": "string"
                               },
-                              "release_date": {
-                                "type": "string",
-                                "format": "date"
-                              },
-                              "images": {},
                               "createdAt": {
                                 "type": "string",
                                 "format": "date-time"
@@ -510,7 +502,7 @@
           }
         },
         "tags": [
-          "Game"
+          "Genre"
         ],
         "parameters": [
           {
@@ -612,20 +604,12 @@
                         "attributes": {
                           "type": "object",
                           "properties": {
-                            "title": {
+                            "name": {
                               "type": "string"
                             },
-                            "api_id": {
-                              "type": "integer"
-                            },
-                            "box_cover": {
+                            "image_background": {
                               "type": "string"
                             },
-                            "release_date": {
-                              "type": "string",
-                              "format": "date"
-                            },
-                            "images": {},
                             "createdAt": {
                               "type": "string",
                               "format": "date-time"
@@ -1082,7 +1066,7 @@
           }
         },
         "tags": [
-          "Game"
+          "Genre"
         ],
         "parameters": [],
         "requestBody": {
@@ -1094,20 +1078,46 @@
                   "data": {
                     "type": "object",
                     "properties": {
-                      "title": {
+                      "name": {
                         "type": "string"
                       },
-                      "api_id": {
-                        "type": "integer"
-                      },
-                      "box_cover": {
+                      "image_background": {
                         "type": "string"
                       },
-                      "release_date": {
+                      "createdAt": {
                         "type": "string",
-                        "format": "date"
+                        "format": "date-time"
                       },
-                      "images": {}
+                      "updatedAt": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "publishedAt": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "createdBy": {
+                        "oneOf": [
+                          {
+                            "type": "integer"
+                          },
+                          {
+                            "type": "string"
+                          }
+                        ],
+                        "example": "string or id"
+                      },
+                      "updatedBy": {
+                        "oneOf": [
+                          {
+                            "type": "integer"
+                          },
+                          {
+                            "type": "string"
+                          }
+                        ],
+                        "example": "string or id"
+                      }
                     }
                   }
                 }
@@ -1117,7 +1127,7 @@
         }
       }
     },
-    "/games/{id}": {
+    "/genres/{id}": {
       "get": {
         "responses": {
           "200": {
@@ -1134,20 +1144,12 @@
                         "attributes": {
                           "type": "object",
                           "properties": {
-                            "title": {
+                            "name": {
                               "type": "string"
                             },
-                            "api_id": {
-                              "type": "integer"
-                            },
-                            "box_cover": {
+                            "image_background": {
                               "type": "string"
                             },
-                            "release_date": {
-                              "type": "string",
-                              "format": "date"
-                            },
-                            "images": {},
                             "createdAt": {
                               "type": "string",
                               "format": "date-time"
@@ -1604,7 +1606,7 @@
           }
         },
         "tags": [
-          "Game"
+          "Genre"
         ],
         "parameters": [
           {
@@ -1636,20 +1638,12 @@
                         "attributes": {
                           "type": "object",
                           "properties": {
-                            "title": {
+                            "name": {
                               "type": "string"
                             },
-                            "api_id": {
-                              "type": "integer"
-                            },
-                            "box_cover": {
+                            "image_background": {
                               "type": "string"
                             },
-                            "release_date": {
-                              "type": "string",
-                              "format": "date"
-                            },
-                            "images": {},
                             "createdAt": {
                               "type": "string",
                               "format": "date-time"
@@ -2106,7 +2100,7 @@
           }
         },
         "tags": [
-          "Game"
+          "Genre"
         ],
         "parameters": [
           {
@@ -2129,20 +2123,12 @@
                   "data": {
                     "type": "object",
                     "properties": {
-                      "title": {
+                      "name": {
                         "type": "string"
                       },
-                      "api_id": {
-                        "type": "integer"
-                      },
-                      "box_cover": {
+                      "image_background": {
                         "type": "string"
                       },
-                      "release_date": {
-                        "type": "string",
-                        "format": "date"
-                      },
-                      "images": {},
                       "createdAt": {
                         "type": "string",
                         "format": "date-time"
@@ -2344,7 +2330,7 @@
           }
         },
         "tags": [
-          "Game"
+          "Genre"
         ],
         "parameters": [
           {

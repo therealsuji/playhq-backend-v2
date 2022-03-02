@@ -46,6 +46,7 @@
                                               "type": "string",
                                               "format": "date"
                                             },
+                                            "images": {},
                                             "createdAt": {
                                               "type": "string",
                                               "format": "date-time"
@@ -360,7 +361,7 @@
                               "negotiable": {
                                 "type": "boolean"
                               },
-                              "user": {
+                              "owner": {
                                 "type": "object",
                                 "properties": {
                                   "data": {
@@ -565,6 +566,9 @@
                                                 }
                                               }
                                             }
+                                          },
+                                          "fcm_token": {
+                                            "type": "string"
                                           },
                                           "createdAt": {
                                             "type": "string",
@@ -969,6 +973,7 @@
                                             "type": "string",
                                             "format": "date"
                                           },
+                                          "images": {},
                                           "createdAt": {
                                             "type": "string",
                                             "format": "date-time"
@@ -1283,7 +1288,7 @@
                             "negotiable": {
                               "type": "boolean"
                             },
-                            "user": {
+                            "owner": {
                               "type": "object",
                               "properties": {
                                 "data": {
@@ -1488,6 +1493,9 @@
                                               }
                                             }
                                           }
+                                        },
+                                        "fcm_token": {
+                                          "type": "string"
                                         },
                                         "createdAt": {
                                           "type": "string",
@@ -1778,7 +1786,7 @@
                       "negotiable": {
                         "type": "boolean"
                       },
-                      "user": {
+                      "owner": {
                         "oneOf": [
                           {
                             "type": "integer"
@@ -1876,6 +1884,7 @@
                                             "type": "string",
                                             "format": "date"
                                           },
+                                          "images": {},
                                           "createdAt": {
                                             "type": "string",
                                             "format": "date-time"
@@ -2190,7 +2199,7 @@
                             "negotiable": {
                               "type": "boolean"
                             },
-                            "user": {
+                            "owner": {
                               "type": "object",
                               "properties": {
                                 "data": {
@@ -2395,6 +2404,9 @@
                                               }
                                             }
                                           }
+                                        },
+                                        "fcm_token": {
+                                          "type": "string"
                                         },
                                         "createdAt": {
                                           "type": "string",
@@ -2708,6 +2720,7 @@
                                             "type": "string",
                                             "format": "date"
                                           },
+                                          "images": {},
                                           "createdAt": {
                                             "type": "string",
                                             "format": "date-time"
@@ -3022,7 +3035,7 @@
                             "negotiable": {
                               "type": "boolean"
                             },
-                            "user": {
+                            "owner": {
                               "type": "object",
                               "properties": {
                                 "data": {
@@ -3227,6 +3240,9 @@
                                               }
                                             }
                                           }
+                                        },
+                                        "fcm_token": {
+                                          "type": "string"
                                         },
                                         "createdAt": {
                                           "type": "string",
@@ -3528,7 +3544,7 @@
                       "negotiable": {
                         "type": "boolean"
                       },
-                      "user": {
+                      "owner": {
                         "oneOf": [
                           {
                             "type": "integer"

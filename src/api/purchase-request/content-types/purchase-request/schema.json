@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "purchase_requests",
+  "info": {
+    "singularName": "purchase-request",
+    "pluralName": "purchase-requests",
+    "displayName": "PurchaseRequests",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "final_price": {
+      "type": "float",
+      "required": true,
+      "default": 0
+    },
+    "requester": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "sale": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sale.sale"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "PENDING",
+        "REJECTED",
+        "COMPLETED",
+        "CANCELLED"
+      ],
+      "default": "PENDING",
+      "required": true
+    },
+    "delivery_fee": {
+      "type": "float",
+      "required": false,
+      "default": 0
+    }
+  }
+}

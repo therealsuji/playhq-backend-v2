@@ -9,12 +9,14 @@
     "build": "strapi build",
     "strapi": "strapi"
   },
-  "devDependencies": {},
   "dependencies": {
     "@strapi/plugin-documentation": "^4.0.7",
     "@strapi/plugin-i18n": "4.0.7",
     "@strapi/plugin-users-permissions": "4.0.7",
     "@strapi/strapi": "4.0.7",
+    "firebase-admin": "^10.0.2",
+    "glob": "^7.2.0",
+    "glob-promise": "^4.2.2",
     "sqlite3": "5.0.2"
   },
   "author": {

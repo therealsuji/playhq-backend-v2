@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "platforms",
+  "info": {
+    "singularName": "platform",
+    "pluralName": "platforms",
+    "displayName": "Platform"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "platform_name": {
+      "type": "enumeration",
+      "enum": [
+        "PLAYSTATION",
+        "XBOX",
+        "NINTENDO"
+      ]
+    }
+  }
+}

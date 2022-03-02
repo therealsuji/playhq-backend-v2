@@ -4,7 +4,8 @@
   "info": {
     "singularName": "game",
     "pluralName": "games",
-    "displayName": "Games"
+    "displayName": "Games",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,16 +13,24 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "api_id": {
-      "type": "integer"
+      "type": "integer",
+      "required": true
     },
     "box_cover": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "release_date": {
-      "type": "date"
+      "type": "date",
+      "required": true
+    },
+    "images": {
+      "type": "json",
+      "required": true
     }
   }
 }

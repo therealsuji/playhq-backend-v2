@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_games_lists",
+  "info": {
+    "singularName": "user-games-list",
+    "pluralName": "user-games-lists",
+    "displayName": "User Games List"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "game": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::game.game"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "platform": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::platform.platform"
+    },
+    "list_type": {
+      "type": "enumeration",
+      "enum": [
+        "WISHLIST",
+        "LIBRARY"
+      ],
+      "required": false,
+      "private": true
+    }
+  }
+}

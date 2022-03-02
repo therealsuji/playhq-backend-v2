@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/games": {
+    "/platforms": {
       "get": {
         "responses": {
           "200": {
@@ -19,29 +19,22 @@
                           "attributes": {
                             "type": "object",
                             "properties": {
-                              "title": {
+                              "name": {
                                 "type": "string"
                               },
-                              "api_id": {
-                                "type": "integer"
-                              },
-                              "box_cover": {
-                                "type": "string"
-                              },
-                              "release_date": {
+                              "platform_name": {
                                 "type": "string",
-                                "format": "date"
+                                "enum": [
+                                  "PLAYSTATION",
+                                  "XBOX",
+                                  "NINTENDO"
+                                ]
                               },
-                              "images": {},
                               "createdAt": {
                                 "type": "string",
                                 "format": "date-time"
                               },
                               "updatedAt": {
-                                "type": "string",
-                                "format": "date-time"
-                              },
-                              "publishedAt": {
                                 "type": "string",
                                 "format": "date-time"
                               },
@@ -510,7 +503,7 @@
           }
         },
         "tags": [
-          "Game"
+          "Platform"
         ],
         "parameters": [
           {
@@ -612,29 +605,22 @@
                         "attributes": {
                           "type": "object",
                           "properties": {
-                            "title": {
+                            "name": {
                               "type": "string"
                             },
-                            "api_id": {
-                              "type": "integer"
-                            },
-                            "box_cover": {
-                              "type": "string"
-                            },
-                            "release_date": {
+                            "platform_name": {
                               "type": "string",
-                              "format": "date"
+                              "enum": [
+                                "PLAYSTATION",
+                                "XBOX",
+                                "NINTENDO"
+                              ]
                             },
-                            "images": {},
                             "createdAt": {
                               "type": "string",
                               "format": "date-time"
                             },
                             "updatedAt": {
-                              "type": "string",
-                              "format": "date-time"
-                            },
-                            "publishedAt": {
                               "type": "string",
                               "format": "date-time"
                             },
@@ -1082,7 +1068,7 @@
           }
         },
         "tags": [
-          "Game"
+          "Platform"
         ],
         "parameters": [],
         "requestBody": {
@@ -1094,20 +1080,47 @@
                   "data": {
                     "type": "object",
                     "properties": {
-                      "title": {
+                      "name": {
                         "type": "string"
                       },
-                      "api_id": {
-                        "type": "integer"
-                      },
-                      "box_cover": {
-                        "type": "string"
-                      },
-                      "release_date": {
+                      "platform_name": {
                         "type": "string",
-                        "format": "date"
+                        "enum": [
+                          "PLAYSTATION",
+                          "XBOX",
+                          "NINTENDO"
+                        ]
                       },
-                      "images": {}
+                      "createdAt": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "updatedAt": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "createdBy": {
+                        "oneOf": [
+                          {
+                            "type": "integer"
+                          },
+                          {
+                            "type": "string"
+                          }
+                        ],
+                        "example": "string or id"
+                      },
+                      "updatedBy": {
+                        "oneOf": [
+                          {
+                            "type": "integer"
+                          },
+                          {
+                            "type": "string"
+                          }
+                        ],
+                        "example": "string or id"
+                      }
                     }
                   }
                 }
@@ -1117,7 +1130,7 @@
         }
       }
     },
-    "/games/{id}": {
+    "/platforms/{id}": {
       "get": {
         "responses": {
           "200": {
@@ -1134,29 +1147,22 @@
                         "attributes": {
                           "type": "object",
                           "properties": {
-                            "title": {
+                            "name": {
                               "type": "string"
                             },
-                            "api_id": {
-                              "type": "integer"
-                            },
-                            "box_cover": {
-                              "type": "string"
-                            },
-                            "release_date": {
+                            "platform_name": {
                               "type": "string",
-                              "format": "date"
+                              "enum": [
+                                "PLAYSTATION",
+                                "XBOX",
+                                "NINTENDO"
+                              ]
                             },
-                            "images": {},
                             "createdAt": {
                               "type": "string",
                               "format": "date-time"
                             },
                             "updatedAt": {
-                              "type": "string",
-                              "format": "date-time"
-                            },
-                            "publishedAt": {
                               "type": "string",
                               "format": "date-time"
                             },
@@ -1604,7 +1610,7 @@
           }
         },
         "tags": [
-          "Game"
+          "Platform"
         ],
         "parameters": [
           {
@@ -1636,29 +1642,22 @@
                         "attributes": {
                           "type": "object",
                           "properties": {
-                            "title": {
+                            "name": {
                               "type": "string"
                             },
-                            "api_id": {
-                              "type": "integer"
-                            },
-                            "box_cover": {
-                              "type": "string"
-                            },
-                            "release_date": {
+                            "platform_name": {
                               "type": "string",
-                              "format": "date"
+                              "enum": [
+                                "PLAYSTATION",
+                                "XBOX",
+                                "NINTENDO"
+                              ]
                             },
-                            "images": {},
                             "createdAt": {
                               "type": "string",
                               "format": "date-time"
                             },
                             "updatedAt": {
-                              "type": "string",
-                              "format": "date-time"
-                            },
-                            "publishedAt": {
                               "type": "string",
                               "format": "date-time"
                             },
@@ -2106,7 +2105,7 @@
           }
         },
         "tags": [
-          "Game"
+          "Platform"
         ],
         "parameters": [
           {
@@ -2129,29 +2128,22 @@
                   "data": {
                     "type": "object",
                     "properties": {
-                      "title": {
+                      "name": {
                         "type": "string"
                       },
-                      "api_id": {
-                        "type": "integer"
-                      },
-                      "box_cover": {
-                        "type": "string"
-                      },
-                      "release_date": {
+                      "platform_name": {
                         "type": "string",
-                        "format": "date"
+                        "enum": [
+                          "PLAYSTATION",
+                          "XBOX",
+                          "NINTENDO"
+                        ]
                       },
-                      "images": {},
                       "createdAt": {
                         "type": "string",
                         "format": "date-time"
                       },
                       "updatedAt": {
-                        "type": "string",
-                        "format": "date-time"
-                      },
-                      "publishedAt": {
                         "type": "string",
                         "format": "date-time"
                       },
@@ -2344,7 +2336,7 @@
           }
         },
         "tags": [
-          "Game"
+          "Platform"
         ],
         "parameters": [
           {

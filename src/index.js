@@ -1,4 +1,11 @@
-'use strict';
+"use strict";
+const {
+  setDefaultUserPermission,
+  setSeedData,
+  isFirstRun,
+} = require("./utils/seedData");
+const admin = require("firebase-admin");
+const serviceAccount = require("../serviceAccountKey.json");
 
 module.exports = {
   /**
@@ -16,5 +23,16 @@ module.exports = {
    * This gives you an opportunity to set up your data model,
    * run jobs, or perform some special logic.
    */
-  bootstrap(/*{ strapi }*/) {},
+  async bootstrap({ strapi }) {
+    const shouldSetDefaultData = await isFirstRun();
+    if (shouldSetDefaultData) {
+      setSeedData(strapi);
+      setDefaultUserPermission(strapi);
+    }
+    
+    admin.initializeApp({
+      credential: admin.credential.cert(serviceAccount),
+    });
+    strapi.firebase = admin;
+  },
 };
