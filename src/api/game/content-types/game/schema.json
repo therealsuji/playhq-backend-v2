@@ -8,7 +8,7 @@
     "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
@@ -31,6 +31,19 @@
     "images": {
       "type": "json",
       "required": true
+    },
+    "platforms": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::platform.platform"
+    },
+    "genres": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::genre.genre"
+    },
+    "background_image": {
+      "type": "string"
     }
   }
 }
